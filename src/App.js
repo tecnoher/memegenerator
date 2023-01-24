@@ -48,7 +48,7 @@ const App = () => {
       <div id="meme">
         <span>{text1}</span> <br />
         <span>{text2}</span> <br />
-        {img !== '' && <img src={`/img/${img}.jpg`} />}        
+        {img !== '' && <img src={`./img/${img}.jpg`} />}        
       </div>
       <button onClick={exportImage}>Exportar</button>
     </div>
