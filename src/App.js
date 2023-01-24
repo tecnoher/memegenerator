@@ -25,7 +25,7 @@ const App = () => {
 
       <div>
         <select name="images" id="image-select" onChange={(e) => setImg(e.target.value)}>
-          <option value="">--Please choose an option--</option>
+          <option value="">--Seleccione una opción--</option>
           {memes.length && memes.map((el) => (
             <option value={el}>{el}</option>
           ))}
@@ -45,11 +45,13 @@ const App = () => {
           onChange={(e) => setText2(e.target.value)}
         />
       </div>
-      <div id="meme">
-        <span>{text1}</span> <br />
-        <span>{text2}</span> <br />
-        {img !== '' && <img src={`./img/${img}.jpg`} />}        
+      {img !== '' &&
+      <div id="meme" class="image">
+         <img src={`./img/${img}.jpg`} />
+        <span class="txt-one">{text1}</span> <br />
+        <span class="txt-two">{text2}</span> <br />        
       </div>
+      }
       <button onClick={exportImage}>Exportar</button>
     </div>
   );
